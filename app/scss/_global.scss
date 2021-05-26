@@ -1,0 +1,209 @@
+//MASK LOADER
+.mask {
+	position: fixed;
+	top: 0;
+	transition: 0.5s;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 100;
+	width: 100%;
+	height: 100%;
+	background-color: $white;
+}
+
+.loader {
+	width: 75px;
+	height: 75px;
+	border: 10px solid rgba(212, 0, 0, 0.4);
+	border-radius: 50%;
+	border-left-color: #D40000;
+	animation: loader 1.3s linear infinite;
+}
+
+@keyframes loader {
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+.hide {
+	opacity: 0;
+}
+//MASK
+
+//ОБЩИЕ ПАРАМЕТРЫ>=============================================================================================================================================================================
+body {
+	color: $white;
+	font-size: 14px;
+	background-color: #0e031c;
+	&.lock {
+		overflow: hidden;
+	}
+}
+
+body::-webkit-scrollbar {
+	width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+	background: #050732;
+}
+
+body::-webkit-scrollbar-thumb {
+	background: linear-gradient(90deg, rgba(143,1,6,1) 0%, rgba(143,1,6,1) 100%);
+	border-radius: 25px;
+}
+//ОБЩИЕ ПАРАМЕТРЫ>=============================================================================================================================================================================
+
+//<ОБОЛОЧКА>===================================================================================================================================================================================
+.wrapper {
+	width: 100%;
+	min-height: 100%;
+	overflow: hidden;
+}
+//</ОБОЛОЧКА>==================================================================================================================================================================================
+
+//<ОСНОВНАЯ СЕТКА>=============================================================================================================================================================================
+.container {
+	max-width: $mw + px;
+	margin: 0 auto;
+	width: 100%;
+	padding: 0px 15px;
+	text-align: center;
+}
+//</ОСНОВНАЯ СЕТКА>===========================================================================================================================================================================
+
+//<ОСНОВНОЙ БЛОК>=============================================================================================================================================================================
+.page {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+
+#fullpage {
+	font-size: 25px;
+	// position: relative;
+
+	&::before {
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 1000%;
+		top: 4600px;
+		left: 0;
+		background: url("../images/about/stars.jpg") 0 0/cover no-repeat;
+		z-index: 1;
+	}
+}
+
+.content {
+	font-size: 25px;
+	position: relative;
+
+	&::after {
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background: url("../images/general/stars.png") 0 0/cover no-repeat;
+		z-index: 0;
+	}
+}
+//</ОСНОВНОЙ БЛОК>============================================================================================================================================================================
+
+.title {
+	background: #050732;
+}
+
+//Slick-slick
+.slick-slider {
+	position: relative;
+	min-width: 0;
+	height: 100%;
+
+	.slick-track,
+	.slick-list {
+		-webkit-transform: translate3d(0, 0, 0);
+		-moz-transform: translate3d(0, 0, 0);
+		-ms-transform: translate3d(0, 0, 0);
+		-o-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+	}
+	.slick-list {
+		position: relative;
+		overflow: hidden;
+		width: 100%;
+	}
+	.slick-track {
+		position: relative;
+		width: 100%;
+		display: flex;
+	}
+	.slick-slide {
+		position: relative;
+	}
+	.slick-arrow {
+		position: absolute;
+		width: 15px;
+		height: 30px;
+		top: 40%;
+		z-index: 5;
+		font-size: 0;
+		line-height: 0;
+		transform: translate(0, -50%);
+
+		@media (max-width:600px){
+			top: 165px;
+		}
+
+		&.slick-prev {
+			left: -65px;
+			background: url("../images/attractions/prev.svg") 0 0 / contain no-repeat;
+
+			@media (max-width:768px){
+				left: 20px;
+			}
+		}
+		&.slick-next {
+			right: -65px;
+			background: url("../images/attractions/next.svg") 0 0 / contain no-repeat;
+			@media (max-width:768px){
+				right: 20px;
+			}
+		}
+	}
+	.slick-dots {
+		display: flex;
+		font-size: 0;
+		background-color: #fff;
+		height: 4px;
+
+		li {
+			width: 10%;
+			height: 4px;
+			background-color: #fff;
+			margin: 0 22px;
+			cursor: pointer;
+
+			@media (max-width:600px){
+				margin: 0;
+			}
+
+			button {
+			}
+			&.slick-active {
+				background: #ff002e;
+				height: 12px;
+				border-radius: 5px;
+				margin: -4px 22px 0px 22px;
+				button {
+				}
+			}
+		}
+	}
+}

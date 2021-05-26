@@ -1,0 +1,70 @@
+@font-face {
+	font-family: "Gilroy";
+	font-display: swap;
+	src: url("../fonts/Gilroy-Regular.woff2") format("woff2"), url("../fonts/Gilroy-Regular.woff") format("woff");
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Gilroy";
+	font-display: swap;
+	src: url("../fonts/Gilroy-Medium.woff2") format("woff2"), url("../fonts/Gilroy-Medium.woff") format("woff");
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Gilroy";
+	font-display: swap;
+	src: url("../fonts/Gilroy-Medium.woff2") format("woff2"), url("../fonts/Gilroy-Medium.woff") format("woff");
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Gilroy";
+	font-display: swap;
+	src: url("../fonts/Gilroy-Semibold.woff2") format("woff2"), url("../fonts/Gilroy-Semibold.woff") format("woff");
+	font-weight: 600;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Gilroy";
+	font-display: swap;
+	src: url("../fonts/Gilroy-Bold.woff2") format("woff2"), url("../fonts/Gilroy-Bold.woff") format("woff");
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Gilroy";
+	font-display: swap;
+	src: url("../fonts/Gilroy-Extrabold.woff2") format("woff2"), url("../fonts/Gilroy-Extrabold.woff") format("woff");
+	font-weight: 800;
+	font-style: normal;
+}
+
+@font-face {
+    font-family: 'Sverdlovsk';
+	font-display: swap;
+    src: url('../fonts/SverdlovskRegular.woff2') format('woff2'),
+        url('../fonts/SverdlovskRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Bebas';
+	font-display: swap;
+    src: url('../fonts/BebasNeueBold.woff2') format('woff2'),
+        url('../fonts/BebasNeueBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+//<Шрифт по умолчанию>===========================================================================================================================================================================
+$fontfamily: "Gilroy", sans-serif;
+//</Шрифт по умолчанию>==========================================================================================================================================================================
